@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="acesso/css/style_tenho_cade.css">
+    <title>Cadastro efetuado!</title>
+</head>
+<body>
+     <!-- Imagem inserida no projeto -->
+     <div class="container">
+        <div class="form-image">
+            <img src="acesso/imagem/undraw_happy_music_g6wc.svg" alt="Ovindo músicas">
+        </div>
+    </div>
+    
+    <div class="= form">
+        <form>
+            <!--Acesso ao BD-->
+            <form action="acesso/php/banco.php" method="post"></form>
+            <!--Criação do "scopo" -->
+            <div class="header">
+                <h1>Olá, Seja muito bem vindo ao VariableSong </h1><br>
+                 <h4>Aqui você pode fazer o comentários para diversas músicas, dando notas e ainda podendo interagir com outros usuários.Agora que você já tem o seu cadastro clik para entar e aproveite.</h4><br>
+            </div>
+            <!--Botão de retorno-->
+            <div class="back-button">
+                <button><a href="cad_form.html" class="button">Voltar</a></button>
+           </div>
+           
+            <!--Dados para entrada do cadastro-->
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Digite o seu Email" required>
+                </div>
+                  <div class="input-box">
+                      <label for="password">Senha</label>
+                       <input id="password" type="password" name="password" placeholder="Digite a sua senha" required>
+                </div>
+            </div>
+            <!--Botão para entrada -->
+            <div class="start-button">
+                <button><a= href="avaliação-1.html" class="button">Entar</a></button> 
+           </div>
+        </form>
+    </div>
+</body>
+</html>

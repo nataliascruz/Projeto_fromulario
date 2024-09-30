@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="acesso/css/style_avaliacao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    
+    <!--dados de entrada-->
+    <div class="container">
+        <div class="form-image">
+            <img src="acesso/imagem/undraw_recording_re_5xyq.svg" alt="ovindo algum audio">
+        </div>
+    </div>
+    <div class="form">
+        <h1> VariableSong</h1>
+        <h2>Faça aqui as avaliações das suas músicas favoritas(ou não)</h2>
+        <div class="input-box">
+            <div class="input-box">
+                <label for="title-song">Nome da música:</label>
+                <input id="title-song" type="text" placeholder="Digite qual é a música:">
+            </div>
+            <div class="input-box">
+                <label for="artist">Artista:</label>
+                <input id="artist" type="text" placeholder="Coloque o artista">
+            </div>
+            <div class="input-box">
+                <label for="mensage">Mensagem de avaliação:</label>
+                <textarea id="mensagem"  placeholder="Faça sua avaliação"></textarea>
+            </div>
+        </div>
+    
+
+   <!--Inserção de estrelas para avaliação-->
+    <ul class="avaliacao">
+        <li class="star-icon ativo" data-avaliacao="1"><i class="fa-regular fa-star"></i></li>
+        <li class="star-icon" data-avaliacao="2"><i class="fa-regular fa-star"></i></li>
+        <li class="star-icon" data-avaliacao="3"><i class="fa-regular fa-star"></i></li>
+        <li class="star-icon" data-avaliacao="4"><i class="fa-regular fa-star"></i></li>
+        <li class="star-icon" data-avaliacao="5"><i class="fa-regular fa-star"></i></li>
+    </ul>
+     <!--Botaão de subimissão-->
+     <div class="enviar-button">
+        <button type="submit" name="enviar">Enviar</button>
+    </div>
+
+     <!-- JavaScript para a interação com as estrelas -->
+     <script>
+        const estrelas = document.querySelectorAll('.star-icon');
+        
+        estrelas.forEach((estrela, index) => {
+            estrela.addEventListener('click', () => {
+                // Remove a classe 'ativo' de todas as estrelas
+                estrelas.forEach(star => star.classList.remove('ativo'));
+                
+                // Adiciona a classe 'ativo' às estrelas até o índice clicado
+                for (let i = 0; i <= index; i++) {
+                    estrelas[i].classList.add('ativo');
+                }
+            });
+        });
+    </script>
+ 
+    
+</body>
+</html>
